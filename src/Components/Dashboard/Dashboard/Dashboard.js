@@ -3,31 +3,23 @@ import { Link, Route, Routes } from 'react-router-dom';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import dashboardPic from "../../../assets/Images/Dashboard.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClockFour, faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { faClockFour, faCalendar, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 
 const Dashboard = () => {
-    const toogleMenu = () => {
-        const toggleButton = document.getElementById("toogleDashboard");
-        if (toggleButton.style.display === "none") {
-            toggleButton.style.display = "block";
-        } else {
-            toggleButton.style.display = "none";
-        }
-    }
+
     return (
         <>
-            <button
-                onClick={toogleMenu}
-                type="button"
-                className="fixed left-3 p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                <i className="fas fa-bars text-2xl px-2"></i>
-            </button>
             <main className="flex w-full h-full">
                 <aside className="w-80 h-full bg-gray shadow-md" id="toogleDashboard">
-                    <div className="flex flex-col justify-between h-screen p-4 bg-gray-800">
+                    <div className="flex flex-col justify-between min-h-screen p-4 bg-gray-800">
                         <div className="text-sm text-left">
                             <h1 className="text-white text-3xl font-semibold mb-6">MY BOSS</h1>
                             <img className=" mb-4 mx-auto rounded-md" src={dashboardPic} alt="User" />
+                            <div className="flex justify-between px-2">
+                                <h3 className="text-white text-2xl mb-3">Arch</h3>
+                                <FontAwesomeIcon icon={faEllipsisVertical} className="text-white text-2xl" />
+                            </div>
+                            <p className="text-white mb-10">200 George St, Sydney NEW 2000</p>
                             <Link to="/dashboard">
                                 <div className="text-white p-2 rounded mt-2 cursor-pointer hover:bg-gray-700">
                                     <FontAwesomeIcon icon={faClockFour} className="text-lg mx-6 align-middle" />
