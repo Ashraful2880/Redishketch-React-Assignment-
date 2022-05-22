@@ -1,10 +1,11 @@
 import React from 'react';
+import Login from '../Login/Login';
 
 const Home = () => {
     return (
-        <div style={{ minHeight: "60vh" }}>
-            This is Bannar Area
-        </div>
+        <>
+            <Login />
+        </>
     );
 };
 
