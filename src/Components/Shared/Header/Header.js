@@ -4,7 +4,7 @@ import logo from "../../../assets/Images/Logo.png";
 
 const Header = () => {
     return (
-        <div className="bg-gray-800 ">
+        <div className="bg-gray-800">
             <div className="container mx-auto flex justify-between items-center">
                 <div className="flex items-center">
                     <img className="w-24 mr-2" src={logo} alt="Main Logo" />
